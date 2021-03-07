@@ -1,0 +1,60 @@
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bg($url: '', $repeat: no-repeat, $x: center, $y: center, $size: cover) {
+    background: url($url);
+    background-repeat: $repeat;
+    background-position: $x $y;
+    background-size: $size;
+}
+
+@mixin _1199($name, $value){
+    @media (max-width: 1199.98px){
+        #{$name}: $value;
+    }
+}
+@mixin _991($name, $value){
+    @media (max-width: 991.98px){
+        #{$name}: $value;
+    }
+}
+@mixin _767($name, $value){
+    @media (max-width: 767.98px){
+        #{$name}: $value;
+    }
+}
+@mixin _575($name, $value){
+    @media (max-width: 575.98px){
+        #{$name}: $value;
+    }
+}
+
+@mixin block_1199{
+    @media (max-width: 1199.98px){
+        @content;
+    }
+}
+@mixin block_991{
+    @media (max-width: 991.98px){
+        @content;
+    }
+}
+@mixin block_767{
+    @media (max-width: 767.98px){
+        @content;
+    }
+}
+@mixin block_575{
+    @media (max-width: 575.98px){
+        @content;
+    }
+}
+
+@mixin custom-media($size){
+    @media (max-width: $size){
+        @content;
+    }
+}
